@@ -5,4 +5,44 @@
     File Name: app.css*/
 
 body {
+
+}
+
+/*HOMEPAGE/GameTrackerPage CSS*/
+#banner{
+    width: 80%;
+    height: 80px;
+    margin: 30px auto 0 auto;
+    background-color: #808080;
+}
+
+/*NAVIGATION CSS*/
+#navigation{
+    width: 80%;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#navigation li{
+    list-style: none;
+    float: left;
+    padding-right: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#mainContent{
+    width: 80%;
+    height: 600px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #000000;
+}
+
+#Game1 {
+    width:90%;
+    height: 200px;
+    padding-top: 50px;
+    margin: 0 auto 0 auto;
+    background-color: #931111;
 }
