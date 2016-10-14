@@ -27,7 +27,26 @@
                 </asp:DropDownList>
                 <asp:Image ID="AwayImage" runat="server" ImageUrl="~/Assets/images/baseball_logo_sm.png" />
 
+                <label class="control-label" for="GameNumList">Game No. </label>
+                <asp:DropDownList ID="GameNumList" runat="server">
+                    <asp:ListItem Text="1"></asp:ListItem>
+                    <asp:ListItem Text="2"></asp:ListItem>
+                    <asp:ListItem Text="3"></asp:ListItem>
+                    <asp:ListItem Text="4"></asp:ListItem>
+                </asp:DropDownList>
 
+                <label class="control-label" for="SpectatorsTextbox">No. of Spectators </label>
+                <asp:TextBox ID="SpectatorsTextbox" runat="server"></asp:TextBox>
+
+                <h4>Score</h4>
+                <label class="control-label" for="HomeScoreTextbox">Home </label>
+                <asp:TextBox ID="HomeScoreTextbox" runat="server"></asp:TextBox>
+
+
+                <label class="control-label" for="AwayScoreTextbox">Away</label>
+                <asp:TextBox ID="AwayScoreTextbox" runat="server"></asp:TextBox>
+
+                <asp:Button Text="Save" ID="SaveButton" CssClass="btn btn-primary btn-lg" runat="server"/>
             </div>
         </div>
     </div>
