@@ -11,6 +11,7 @@
                 
                 <asp:DropDownList ID="TeamHomeList" runat="server" AutoPostBack="true" OnSelectedIndexChanged="TeamHomeList_SelectedIndexChanged">
                 </asp:DropDownList>
+
                 <asp:Image ID="HomeImage" runat="server" ImageUrl="~/Assets/images/baseball_logo_sm.png"/>
 
 
@@ -23,8 +24,8 @@
                 <asp:Button Text="National" ID="AwayNLButton" CssClass="btn btn-warning btn-md" runat="server" onclick="AwayNLList_Click" />
 
                 <asp:DropDownList ID="TeamAwayList" runat="server" AutoPostBack="true" OnSelectedIndexChanged="TeamAwayList_SelectedIndexChanged">
-
                 </asp:DropDownList>
+
                 <asp:Image ID="AwayImage" runat="server" ImageUrl="~/Assets/images/baseball_logo_sm.png" />
 
                 <label class="control-label" for="GameNumList">Game No. </label>
@@ -34,6 +35,9 @@
                     <asp:ListItem Text="3"></asp:ListItem>
                     <asp:ListItem Text="4"></asp:ListItem>
                 </asp:DropDownList>
+
+                <label class="control-label" for="WeekTextbox">Week </label>
+                <asp:TextBox ID="WeekTextbox" runat="server"></asp:TextBox>
 
                 <label class="control-label" for="SpectatorsTextbox">No. of Spectators </label>
                 <asp:TextBox ID="SpectatorsTextbox" runat="server"></asp:TextBox>
@@ -46,7 +50,7 @@
                 <label class="control-label" for="AwayScoreTextbox">Away</label>
                 <asp:TextBox ID="AwayScoreTextbox" runat="server"></asp:TextBox>
 
-                <asp:Button Text="Save" ID="SaveButton" CssClass="btn btn-primary btn-lg" runat="server"/>
+                <asp:Button Text="Save" ID="SaveButton" CssClass="btn btn-primary btn-lg" runat="server" OnClick="SaveButton_Click"/>
             </div>
         </div>
     </div>

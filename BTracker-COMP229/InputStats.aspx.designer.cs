@@ -103,6 +103,15 @@ namespace BTracker_COMP229 {
         protected global::System.Web.UI.WebControls.DropDownList GameNumList;
         
         /// <summary>
+        /// WeekTextbox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox WeekTextbox;
+        
+        /// <summary>
         /// SpectatorsTextbox control.
         /// </summary>
         /// <remarks>
