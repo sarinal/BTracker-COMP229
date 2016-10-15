@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Input Stats" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="InputStats.aspx.cs" Inherits="BTracker_COMP229.InputStats" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
         <div class="row">
             <div class="col-md-offset-3 col md 6">
