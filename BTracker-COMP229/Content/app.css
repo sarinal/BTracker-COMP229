@@ -11,7 +11,7 @@ body {
 /*HOMEPAGE/GameTrackerPage CSS*/
 #banner{
     width: 80%;
-    height: 80px;
+    height: 160px;
     margin: 30px auto 0 auto;
     background-color: #808080;
 }
@@ -19,18 +19,24 @@ body {
 /*NAVIGATION CSS*/
 #navigation{
     width: 80%;
-    height: 30px;
+    height: 50px;
     margin-left: auto;
     margin-right: auto;
+    background-color: #931111;
+    text-align: left;
 }
 
 #navigation li{
     list-style: none;
     float: left;
-    padding-right: 5px;
-    margin-left: auto;
-    margin-right: auto;
+    padding-right: 15px;
+    padding-top: 10px;
 }
+
+#navigation li a:visited {
+    color: #ffffff;
+}
+
 #mainContent{
     width: 80%;
     height: 600px;

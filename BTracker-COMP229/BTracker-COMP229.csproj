@@ -82,6 +82,7 @@
     <Content Include="Scripts\jquery-2.2.4.min.map" />
     <Content Include="Site.Master" />
     <Content Include="Tracker.aspx" />
+    <Content Include="Login.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -149,6 +150,13 @@
     </Compile>
     <Compile Include="Tracker.aspx.designer.cs">
       <DependentUpon>Tracker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-offset-2 col-md-8">
-                <h1>Student List</h1>
+                <h1>Baseball Games</h1>
                 <a href="/InputStats.aspx" class="btn btn-success btn-sm">
                     <i class="fa fa-plus">Add Game</i>
                 </a>

@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-offset-3 col md 6">
-                
+               
                 <h6>Home Team</h6>
                 <asp:Button Text="American" ID="HomeALButton" CssClass="btn btn-primary btn-md" runat="server" onclick="HomeALList_Click" />
                 <asp:Button Text="National" ID="HomeNLButton" CssClass="btn btn-warning btn-md" runat="server" onclick="HomeNLList_Click" />
