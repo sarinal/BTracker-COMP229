@@ -3,35 +3,33 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="inputstatsPage" class="container">
         <div class="row">
-            <div class="col md 4">
+            <div class="col-md-2 col-sm-2"></div>
+            <div class="col-md-8 col-sm-8">
                 <h1>Stat Input</h1>
-                <br />
+            </div>
+            <div class="col-md-2 col-sm-2"></div>
+            <br />
 
+        </div>
+
+        <div class="row">
+            <div class="col-sm-1 col-md-1"></div>
+            <div id="left" class="col-sm-5 col-md-4">
                 <h5>Home Team</h5>
-                <asp:Button Text="American" ID="HomeALButton" CssClass="btn btn-primary btn-md" runat="server" onclick="HomeALList_Click" />
-                <asp:Button Text="National" ID="HomeNLButton" CssClass="btn btn-warning btn-md" runat="server" onclick="HomeNLList_Click" />
-                
+                <asp:Button Text="American" ID="HomeALButton" CssClass="btn btn-primary btn-md" runat="server" OnClick="HomeALList_Click" />
+                <asp:Button Text="National" ID="HomeNLButton" CssClass="btn btn-warning btn-md" runat="server" OnClick="HomeNLList_Click" />
+                <br />
                 <asp:DropDownList ID="TeamHomeList" runat="server" AutoPostBack="true" OnSelectedIndexChanged="TeamHomeList_SelectedIndexChanged">
                 </asp:DropDownList>
+                <br />
+                <asp:Image ID="HomeImage" runat="server" CssClass="img" ImageUrl="~/Assets/images/baseball_logo_sm.png" />
 
-                <asp:Image ID="HomeImage" runat="server" ImageUrl="~/Assets/images/baseball_logo_sm.png"/>
-
-
-                <label class="control-label" for="GameDateTextbox">Date </label>
-                    <asp:TextBox runat="server" ID="GameDateTextbox" 
-                        placeholder="Enrollment Date" requiered="true" TextMode="Date"></asp:TextBox>
-                </div>
-            <div></div>
-            <div class="col-md-4">
-                <h5>Away Team</h5>
-                <asp:Button Text="American" ID="AwayALButton" CssClass="btn btn-primary btn-md" runat="server" onclick="AwayALList_Click" />
-                <asp:Button Text="National" ID="AwayNLButton" CssClass="btn btn-warning btn-md" runat="server" onclick="AwayNLList_Click" />
-
-                <asp:DropDownList ID="TeamAwayList" runat="server" AutoPostBack="true" OnSelectedIndexChanged="TeamAwayList_SelectedIndexChanged">
-                </asp:DropDownList>
-
-                <asp:Image ID="AwayImage" runat="server" ImageUrl="~/Assets/images/baseball_logo_sm.png" />
             </div>
+            <div id="middle" class="col-sm-3 col-md-2">
+                <label class="control-label" for="GameDateTextbox">Date </label>
+                <asp:TextBox runat="server" ID="GameDateTextbox"
+                    placeholder="Enrollment Date" required="true" TextMode="Date"></asp:TextBox>
+                <br />
                 <label class="control-label" for="GameNumList">Game No. </label>
                 <asp:DropDownList ID="GameNumList" runat="server">
                     <asp:ListItem Text="1"></asp:ListItem>
@@ -39,23 +37,42 @@
                     <asp:ListItem Text="3"></asp:ListItem>
                     <asp:ListItem Text="4"></asp:ListItem>
                 </asp:DropDownList>
-
+                <br />
                 <label class="control-label" for="WeekTextbox">Week </label>
                 <asp:TextBox ID="WeekTextbox" runat="server"></asp:TextBox>
-
+                <br />
                 <label class="control-label" for="SpectatorsTextbox">No. of Spectators </label>
                 <asp:TextBox ID="SpectatorsTextbox" runat="server"></asp:TextBox>
+            </div>
 
-                <h4>Score</h4>
+            <div id="right" class="col-sm-5 col-md-4">
+                <h5>Away Team</h5>
+                <asp:Button Text="American" ID="AwayALButton" CssClass="btn btn-primary btn-md" runat="server" OnClick="AwayALList_Click" />
+                <asp:Button Text="National" ID="AwayNLButton" CssClass="btn btn-warning btn-md" runat="server" OnClick="AwayNLList_Click" />
+                <br />
+                <asp:DropDownList ID="TeamAwayList" runat="server" AutoPostBack="true" OnSelectedIndexChanged="TeamAwayList_SelectedIndexChanged">
+                </asp:DropDownList>
+                <br />
+                <asp:Image ID="AwayImage" runat="server" CssClass="img" ImageUrl="~/Assets/images/baseball_logo_sm.png" />
+            </div>
+            <div class="col-sm-1 col-md-1"></div>
+
+        </div>
+        <br />
+        <div id="bottom" class="row">
+            <div class="col-sm-2 col-md-3"></div>
+            <div class="col-sm-8 col-md-6">
+                <h5>Score</h5>
                 <label class="control-label" for="HomeScoreTextbox">Home </label>
                 <asp:TextBox ID="HomeScoreTextbox" runat="server"></asp:TextBox>
 
-
                 <label class="control-label" for="AwayScoreTextbox">Away</label>
                 <asp:TextBox ID="AwayScoreTextbox" runat="server"></asp:TextBox>
+                <br />
+                <asp:Button Text="Save" ID="SaveButton" CssClass="btn btn-primary btn-lg" runat="server" OnClick="SaveButton_Click" />
+            </div>
+            <div class="col-sm-2 col-md-3"></div>
 
-                <asp:Button Text="Save" ID="SaveButton" CssClass="btn btn-primary btn-lg" runat="server" OnClick="SaveButton_Click"/>
-            
         </div>
     </div>
 </asp:Content>
