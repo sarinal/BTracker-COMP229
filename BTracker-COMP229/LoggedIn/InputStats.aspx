@@ -34,7 +34,7 @@
             <div id="middle" class="col-sm-3 col-md-2">
                 <label class="control-label" for="GameDateTextbox">Date </label>
                 <asp:TextBox runat="server" ID="GameDateTextbox"
-                    placeholder="Enrollment Date" required="true" TextMode="Date"></asp:TextBox>
+                    placeholder="Game Date" required="true" TextMode="Date"></asp:TextBox>
                 <br />
                 <label class="control-label" for="GameNumList">Game No. </label>
                 <asp:DropDownList ID="GameNumList" runat="server">

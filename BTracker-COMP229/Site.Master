@@ -33,7 +33,7 @@
             <div class="col-md-8">
                 <ul>
                     <li id="home">
-                        <a href="Default.aspx"><i class="fa fa-bullseye" aria-hidden="true"></i> Home</a>
+                        <a href="Default.aspx" runat="server"><i class="fa fa-bullseye" aria-hidden="true"></i> Home</a>
                     </li>
                     <asp:PlaceHolder ID="PublicPlaceHolder" runat="server">
                     

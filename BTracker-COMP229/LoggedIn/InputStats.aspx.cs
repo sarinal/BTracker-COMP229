@@ -12,6 +12,8 @@ namespace BTracker_COMP229
 {
     public partial class InputStats : System.Web.UI.Page
     {
+        string[] ALTeams =  new string[] { "Baltimore Orioles", "Boston Red Sox", "Chicago White Sox", "Cleveland Indians", "Detroit Tigers", "Houston Astros", "Kansas City Royals", "Los Angeles Angels", "Minnesota Twins", "New York Yankees", "Oakland Athletics", "Seattle Mariners", "Tampa Bay Rays", "Texas Rangers", "Toronto Blue Jays" };
+        string[] NLTeams = new string[] { "Arizona Diamondbacks", "Atlanta Braves", "Chicago Cubs", "Cincinnati Reds", "Colorado Rockies", "Los Angeles Dodgers", "Miami Marlins", "Milwaukee Brewers", "New York Mets", "Philadelphia Phillies", "Pittsburgh Pirates", "San Diego Padres", "San Francisco Giants", "St. Louis Cardinals", "Washington Nationals" };
         protected void Page_Load(object sender, EventArgs e)
         {
             //if ((!IsPostBack) && (Request.QueryString.Count > 0))
@@ -53,22 +55,14 @@ namespace BTracker_COMP229
 
         protected void HomeALList_Click(object sender, EventArgs e)
         {
+
             TeamHomeList.Items.Clear();
-                TeamHomeList.Items.Add(new ListItem("Baltimore Orioles", "AL1"));
-                TeamHomeList.Items.Add(new ListItem("Boston Red Sox", "AL2"));
-            TeamHomeList.Items.Add(new ListItem("Chicago White Sox", "AL3"));
-            TeamHomeList.Items.Add(new ListItem("Cleveland Indians", "AL4"));
-            TeamHomeList.Items.Add(new ListItem("Detroit Tigers", "AL5"));
-            TeamHomeList.Items.Add(new ListItem("Houston Astros", "AL6"));
-            TeamHomeList.Items.Add(new ListItem("Kansas City Royals", "AL7"));
-            TeamHomeList.Items.Add(new ListItem("Los Angeles Angels", "AL8"));
-            TeamHomeList.Items.Add(new ListItem("Minnesota Twins", "AL9"));
-            TeamHomeList.Items.Add(new ListItem("Boston Red Sox", "AL10"));
-            TeamHomeList.Items.Add(new ListItem("Boston Red Sox", "AL11"));
-            TeamHomeList.Items.Add(new ListItem("Boston Red Sox", "AL12"));
-            TeamHomeList.Items.Add(new ListItem("Boston Red Sox", "AL13"));
-            TeamHomeList.Items.Add(new ListItem("Boston Red Sox", "AL14"));
-            TeamHomeList.Items.Add(new ListItem("Boston Red Sox", "AL15"));
+            for (int i=1;i<16; i++)
+            {
+                string teamNum = "AL" + i;
+                string teamName = ALTeams[i-1];
+                TeamHomeList.Items.Add(new ListItem(teamName, teamNum));
+            }
             string Team = TeamHomeList.SelectedValue;
             HomeImage.ImageUrl = "~/Assets/images/" + Team + ".jpg";
 
@@ -77,8 +71,12 @@ namespace BTracker_COMP229
         protected void HomeNLList_Click(object sender, EventArgs e)
         {
             TeamHomeList.Items.Clear();
-            TeamHomeList.Items.Add(new ListItem("Arizona Diamondbacks", "NL1"));
-            TeamHomeList.Items.Add(new ListItem("Atlanta Braves", "NL2"));
+            for (int i = 1; i < 16; i++)
+            {
+                string teamNum = "NL" + i;
+                string teamName = NLTeams[i - 1];
+                TeamHomeList.Items.Add(new ListItem(teamName, teamNum));
+            }
             string Team = TeamHomeList.SelectedValue;
             HomeImage.ImageUrl = "~/Assets/images/" + Team + ".jpg";
 
@@ -87,8 +85,12 @@ namespace BTracker_COMP229
         protected void AwayALList_Click(object sender, EventArgs e)
         {
             TeamAwayList.Items.Clear();
-            TeamAwayList.Items.Add(new ListItem("Baltimore Orioles", "AL1"));
-            TeamAwayList.Items.Add(new ListItem("Boston Red Sox", "AL2"));
+            for (int i = 1; i < 16; i++)
+            {
+                string teamNum = "AL" + i;
+                string teamName = ALTeams[i-1];
+                TeamAwayList.Items.Add(new ListItem(teamName, teamNum));
+            }
             string Team = TeamAwayList.SelectedValue;
             AwayImage.ImageUrl = "~/Assets/images/" + Team + ".jpg";
 
@@ -97,8 +99,13 @@ namespace BTracker_COMP229
         protected void AwayNLList_Click(object sender, EventArgs e)
         {
             TeamAwayList.Items.Clear();
-            TeamAwayList.Items.Add(new ListItem("Arizona Diamondbacks", "NL1"));
-            TeamAwayList.Items.Add(new ListItem("Atlanta Braves", "NL2"));
+            TeamAwayList.Items.Clear();
+            for (int i = 1; i < 16; i++)
+            {
+                string teamNum = "NL" + i;
+                string teamName = NLTeams[i - 1];
+                TeamAwayList.Items.Add(new ListItem(teamName, teamNum));
+            }
             string Team = TeamAwayList.SelectedValue;
             AwayImage.ImageUrl = "~/Assets/images/" + Team + ".jpg";
 
@@ -146,6 +153,7 @@ namespace BTracker_COMP229
                 newGame.home_score = homeScore;
                 newGame.away_score = awayScore;
                 newGame.week = Convert.ToInt32(WeekTextbox.Text);
+                newGame.game_date = Convert.ToDateTime(GameDateTextbox.Text);
 
                 db.games.Add(newGame);
 
