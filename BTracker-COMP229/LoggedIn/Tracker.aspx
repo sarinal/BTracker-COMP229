@@ -19,10 +19,11 @@
                         <asp:BoundField DataField="away_score" HeaderText="Away Team Score" Visible="true" />
                         <asp:BoundField DataField="game_date" HeaderText="Date" Visible="true" 
                             DataFormatString="{0:MMM dd, yyyy}"/>
-                        <asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg'></i> Edit"
+
+                        <%--<asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg'></i> Edit"
                             NavigateUrl="~/LoggedIn/InputStats.aspx.cs" ControlStyle-CssClass="btn btn-primary btn-sm"
                             runat="server" DataNavigateUrlFields="GameID" 
-                            DataNavigateUrlFormatString="InputStats.aspx?StudentID={0}" /> 
+                            DataNavigateUrlFormatString="InputStats.aspx?GameID={0}" /> --%>
 
                         <asp:CommandField HeaderText="Delete" DeleteText="<i class='fa fa-trash-o fa-lg'></i> Delete"
                             ShowDeleteButton="true" ButtonType="Link" ControlStyle-CssClass="btn btn-danger btn-sm"/>

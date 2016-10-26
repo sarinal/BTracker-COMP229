@@ -14,12 +14,12 @@ namespace BTracker_COMP229
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if ((!IsPostBack) && (Request.QueryString.Count > 0))
-            {
-                this.GetGame();
+            //if ((!IsPostBack) && (Request.QueryString.Count > 0))
+            //{
+            //    this.GetGame();
 
 
-            }
+            //}
         }
 
         protected void GetGame()
@@ -38,7 +38,14 @@ namespace BTracker_COMP229
                 
                 if (updatedGame != null)
                 {
-                    
+                    switch(updatedGame.home_team)
+                    {
+                        case "Baltimore Orioles": case "Boston Red Sox": case "Chicago White Sox": case "Cleveland Indians": case "Detroit Tigers": case "Houston Astros": case "Kansas City Royals": case "Los Angeles Angels": case "Minnesota Twins": case "New York Yankees": case "Oakland Athletics": case "Seattle Mariners": case "Tampa Bay Rays": case "Texas Rangers": case "Toronto Blue Jays":
+                            
+                            break;
+                        default:
+                            break;
+                    }
 
                 }
             }
