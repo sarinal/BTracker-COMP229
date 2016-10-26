@@ -30,6 +30,7 @@ namespace BTracker_COMP229
                     LoginPlaceHolder.Visible = false;
                     PublicPlaceHolder.Visible = true;
                 }
+                username.Text = "Hello, " + HttpContext.Current.User.Identity.Name;
             }
             
         }

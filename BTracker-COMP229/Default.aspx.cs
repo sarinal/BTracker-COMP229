@@ -41,7 +41,7 @@ namespace BTracker_COMP229
                     TableCell c2r1 = new TableCell();
                     TableCell c3r1 = new TableCell();
                     c1r1.Controls.Add(new LiteralControl("<h1>HOME TEAM </h1> "));
-                    c2r1.Controls.Add(new LiteralControl(game.game_date.ToString("MMM dd, yyyy")));
+                    c2r1.Controls.Add(new LiteralControl("<h5>" + game.game_date.ToString("MMM dd, yyyy") + "</h5>"));
                     c3r1.Controls.Add(new LiteralControl("<h1>AWAY TEAM</h1>"));
                     r1.Cells.Add(c1r1);
                     r1.Cells.Add(c2r1);
@@ -52,9 +52,9 @@ namespace BTracker_COMP229
                     TableCell c1r2 = new TableCell();
                     TableCell c2r2 = new TableCell();
                     TableCell c3r2 = new TableCell();
-                    c1r2.Controls.Add(new LiteralControl(game.home_team));
-                    c2r2.Controls.Add(new LiteralControl("Week: " + game.week + " Game: " + game.game_num + "<br/> Spectators: " + game.spectators));
-                    c3r2.Controls.Add(new LiteralControl(game.away_team));
+                    c1r2.Controls.Add(new LiteralControl("<h5>" + game.home_team + "</h5>"));
+                    c2r2.Controls.Add(new LiteralControl("<h5> Week: " + game.week + " Game: " + game.game_num + "<br/> Spectators: " + game.spectators + "</h5>"));
+                    c3r2.Controls.Add(new LiteralControl("<h5>" + game.away_team + "</h5>"));
                     r2.Cells.Add(c1r2);
                     r2.Cells.Add(c2r2);
                     r2.Cells.Add(c3r2);
@@ -65,8 +65,8 @@ namespace BTracker_COMP229
                     TableCell c2r3 = new TableCell();
                     TableCell c3r3 = new TableCell();
                     c1r1.Style.Add(HtmlTextWriterStyle.Padding, "5px");
-                    c1r3.Controls.Add(new LiteralControl("<img src = 'Assets/images/" + game.home_team + ".png' width='200px % ' height='200px '>"));
-                    c2r3.Controls.Add(new LiteralControl("<img src = 'Assets/images/versus.png'width='200px % ' height='200px '>"));
+                    c1r3.Controls.Add(new LiteralControl("<img src = 'Assets/images/" + game.home_team + ".png' width='200px ' height='200px '>"));
+                    c2r3.Controls.Add(new LiteralControl("<img src = 'Assets/images/versus.png'width='200px ' height='200px '>"));
                     c1r3.Style.Add(HtmlTextWriterStyle.Padding, "5px");
                     c3r3.Controls.Add(new LiteralControl("<img src = 'Assets/images/" + game.away_team + ".png' width='200px ' height='200px '>"));
                     r3.Cells.Add(c1r3);

@@ -37,8 +37,11 @@
                     <asp:PlaceHolder ID="LoginPlaceHolder" runat="server">
                     <li id="update">
                         <a href="/LoggedIn/Tracker.aspx"><i class="fa fa-pencil" aria-hidden="true"></i> Update</a>
-                        <li id="logout" runat="server"><a href="/Logout.aspx"><i class="fa fa-sign-out fa-lg"></i>Logout</a></li>
+                        
                     </li>
+                        <li id="logout" runat="server"><a href="/Logout.aspx"><i class="fa fa-sign-out fa-lg"></i>Logout</a></li>
+                        <li>
+                            <asp:Label ID="username" runat="server" Text=""></asp:Label></li>
                     </asp:PlaceHolder>
                 </ul>
             </div>
