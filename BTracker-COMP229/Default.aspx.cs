@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using BTracker_COMP229.Models;
 using System.Web.ModelBinding;
+using System.Web.UI.HtmlControls;
 
 namespace BTracker_COMP229
 {
@@ -25,13 +26,14 @@ namespace BTracker_COMP229
 
                 foreach (var game in Games)
                 {
-                    System.Web.UI.HtmlControls.HtmlGenericControl divNew = new System.Web.UI.HtmlControls.HtmlGenericControl("div");
+                    HtmlGenericControl divNew = new HtmlGenericControl("div");
                     placeholder.Controls.Add(divNew);
                     divNew.ID = "newDivRow";
 
 
 
                     Table newTable = new Table();
+
 
 
                     TableRow r1 = new TableRow();
@@ -62,9 +64,11 @@ namespace BTracker_COMP229
                     TableCell c1r3 = new TableCell();
                     TableCell c2r3 = new TableCell();
                     TableCell c3r3 = new TableCell();
-                    c1r3.Controls.Add(new LiteralControl("<img src = 'Assets/images/" + game.home_team + ".png'>"));
-                    c2r3.Controls.Add(new LiteralControl("<img src = 'Assets/images/versus.png'>"));
-                    c3r3.Controls.Add(new LiteralControl("<img src = 'Assets/images/" + game.away_team + ".png'>"));
+                    c1r1.Style.Add(HtmlTextWriterStyle.Padding, "5px");
+                    c1r3.Controls.Add(new LiteralControl("<img src = 'Assets/images/" + game.home_team + ".png' width='200px % ' height='200px '>"));
+                    c2r3.Controls.Add(new LiteralControl("<img src = 'Assets/images/versus.png'width='200px % ' height='200px '>"));
+                    c1r3.Style.Add(HtmlTextWriterStyle.Padding, "5px");
+                    c3r3.Controls.Add(new LiteralControl("<img src = 'Assets/images/" + game.away_team + ".png' width='200px ' height='200px '>"));
                     r3.Cells.Add(c1r3);
                     r3.Cells.Add(c2r3);
                     r3.Cells.Add(c3r3);
@@ -89,6 +93,7 @@ namespace BTracker_COMP229
                     r4.Cells.Add(c3r4);
                     newTable.Rows.Add(r4);
 
+                    
                     divNew.Controls.Add(newTable);
                         }
             }
