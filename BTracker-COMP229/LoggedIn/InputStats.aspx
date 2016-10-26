@@ -71,6 +71,10 @@
                 <label class="control-label" for="AwayScoreTextbox">Away</label>
                 <br />
                 <asp:Button Text="Save" ID="SaveButton" CssClass="btn btn-primary btn-lg" runat="server" OnClick="SaveButton_Click" />
+                 
+                    <asp:Button Text="Cancel" ID="CancelButton" CssClass="btn btn-warning btn-lg" runat="server"
+                        UseSubmitBehavior="false" CausesValidation="false" OnClick="CancelButton_Click"/>
+                   
             </div>
             <div class="col-sm-2 col-md-3"></div>
 
