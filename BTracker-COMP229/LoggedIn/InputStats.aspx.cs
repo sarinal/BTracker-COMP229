@@ -56,6 +56,19 @@ namespace BTracker_COMP229
             TeamHomeList.Items.Clear();
                 TeamHomeList.Items.Add(new ListItem("Baltimore Orioles", "AL1"));
                 TeamHomeList.Items.Add(new ListItem("Boston Red Sox", "AL2"));
+            TeamHomeList.Items.Add(new ListItem("Chicago White Sox", "AL3"));
+            TeamHomeList.Items.Add(new ListItem("Cleveland Indians", "AL4"));
+            TeamHomeList.Items.Add(new ListItem("Detroit Tigers", "AL5"));
+            TeamHomeList.Items.Add(new ListItem("Houston Astros", "AL6"));
+            TeamHomeList.Items.Add(new ListItem("Kansas City Royals", "AL7"));
+            TeamHomeList.Items.Add(new ListItem("Los Angeles Angels", "AL8"));
+            TeamHomeList.Items.Add(new ListItem("Minnesota Twins", "AL9"));
+            TeamHomeList.Items.Add(new ListItem("Boston Red Sox", "AL10"));
+            TeamHomeList.Items.Add(new ListItem("Boston Red Sox", "AL11"));
+            TeamHomeList.Items.Add(new ListItem("Boston Red Sox", "AL12"));
+            TeamHomeList.Items.Add(new ListItem("Boston Red Sox", "AL13"));
+            TeamHomeList.Items.Add(new ListItem("Boston Red Sox", "AL14"));
+            TeamHomeList.Items.Add(new ListItem("Boston Red Sox", "AL15"));
             string Team = TeamHomeList.SelectedValue;
             HomeImage.ImageUrl = "~/Assets/images/" + Team + ".jpg";
 

@@ -19,7 +19,7 @@
         
         <form id="form2" runat="server">
         <div id="banner" class="row">
-            <img src="Assets/images/baseball_logo.png"/>
+            <img src="~/Assets/images/baseball_logo.png" runat="server"/>
         </div>
         <div id="navigation" class="row">
             <div class="col-md-2"></div>
