@@ -122,6 +122,7 @@
   <ItemGroup>
     <Content Include="Assets\images\baseball_logo.png" />
     <Content Include="Default.aspx" />
+    <Content Include="LoggedIn\Assets\images\baseball_logo.png" />
     <Content Include="LoggedIn\InputStats.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="packages.config">
