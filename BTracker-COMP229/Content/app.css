@@ -117,5 +117,14 @@ body {
     margin-bottom: 10px;
 }
 
+#inputstatsPage #bottom .btn{
+    background-image: none;
+    background-color: #2d9c2f;
+    border-color: #19511a;
+    margin-top: 10px;
+    text-align: center;
+    width: 100px;
+}
+
 
 
