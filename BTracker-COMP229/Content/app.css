@@ -17,6 +17,14 @@ body {
     -webkit-animation-delay: 0.1s;
 }
 
+table {
+    border: 5px solid white;
+    text-align: center;
+}
+
+td
+{ padding: 20px;
+}
 
 @-webkit-keyframes fontfix {
   from { opacity: 1; }
