@@ -24,23 +24,21 @@ namespace BTracker_COMP229
 
         protected void GetGame()
         {
-            // populate the form with existing data fromt he db
+            
             int GameID = Convert.ToInt32(Request.QueryString["GameID"]);
 
-            //connect to the EF db
+            
             using (BTrackerContext db = new BTrackerContext())
             {
-                //poplate a student object instance witht hte studentid fromt he url query
-                Student updatedStudent = (from student in db.Students
-                                          where student.StudentID == StudentID
+               
+                game updatedGame = (from student in db.games
+                                          where student.GameID == GameID
                                           select student).FirstOrDefault();
 
-                //map the student properties to the form control
-                if (updatedStudent != null)
+                
+                if (updatedGame != null)
                 {
-                    LastNameTextbox.Text = updatedStudent.LastName;
-                    FirstNameTextbox.Text = updatedStudent.FirstMidName;
-                    EnrollmentDateTextbox.Text = updatedStudent.EnrollmentDate.ToString("yyyy-MM-dd");
+                    
 
                 }
             }
