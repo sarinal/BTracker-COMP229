@@ -1,5 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="BTracker_COMP229.WebForm2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <!-- Author: Sarina Luu, Sam Buensuceso
+    Student#: 300838958, 300799984
+    Date: October 25, 2016
+    Version: 2.0
+    File Name: Login.aspx--> 
 
     <div class="container">    
         <div class="row">

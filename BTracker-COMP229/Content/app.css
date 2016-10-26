@@ -31,7 +31,8 @@ table img{
 }
 
 td
-{ padding: 20px;
+{ 
+    padding: 5px;
 }
 
 @-webkit-keyframes fontfix {

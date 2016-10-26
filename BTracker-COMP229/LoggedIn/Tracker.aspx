@@ -1,5 +1,10 @@
 ﻿<%@ Page Title="Tracker" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Tracker.aspx.cs" Inherits="BTracker_COMP229.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <!-- Author: Sarina Luu, Sam Buensuceso
+    Student#: 300838958, 300799984
+    Date: October 25, 2016
+    Version: 2.0
+    File Name: Tracker.aspx--> 
 
     <div class="container">
         <div class="row">
