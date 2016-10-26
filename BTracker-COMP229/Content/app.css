@@ -45,7 +45,11 @@ td
     height: 160px;
     margin: auto auto 0 auto;
     background-color: #808080;
+}
 
+#banner img {
+    padding-right:30%;
+    padding-left: 30%;
 }
 
 /*NAVIGATION CSS*/
