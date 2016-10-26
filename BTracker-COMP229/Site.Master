@@ -1,7 +1,11 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="BTracker_COMP229.Master" %>
 
 <!DOCTYPE html>
-
+<!-- Author: Sarina Luu, Sam Buensuceso
+    Student#: 300838958, 300799984
+    Date: October 25, 2016
+    Version: 2.0
+    File Name: Site.Master.aspx--> 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta charset="utf-8" />

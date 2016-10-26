@@ -1,6 +1,12 @@
 ﻿<%@ Page Title="Input Stats" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="InputStats.aspx.cs" Inherits="BTracker_COMP229.InputStats" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <!-- Author: Sarina Luu, Sam Buensuceso
+    Student#: 300838958, 300799984
+    Date: October 25, 2016
+    Version: 2.0
+    File Name: InputStats.aspx--> 
+
     <div id="inputstatsPage" class="container">
         <div class="row">
             <div class="col-md-2 col-sm-2"></div>
