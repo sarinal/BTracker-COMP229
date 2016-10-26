@@ -3,13 +3,14 @@
 
     <div class="container">    
         <div class="row">
-            <div class="col-md-offset-4 col-md-4"> 
+            <div class="col-md-2 col-sm-2"></div>
+            <div class="col-md-8 col-sm-8"> 
                 <div class="alert alert-danger" id="AlertFlash" runat="server" visible="false">
                     <asp:Label runat="server" ID="StatusLabel" />
                 </div>
 
                 <h1>Login Page</h1>
-                <div class="panel panel-primary">
+                <div class="panel">
                     <div class="panel-heading">
                         <h1 class="panel-title"><i class="fa fa-sign-in fa-lg"></i> Login</h1>
                     </div> 
@@ -36,6 +37,7 @@
                 </div>
 
             </div>
+            <div class="col-md-2 col-sm-2"></div>
 
         </div>
 

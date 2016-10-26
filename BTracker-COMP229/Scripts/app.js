@@ -3,3 +3,10 @@
     Date: October 6, 2016
     Version: 1.0
     File Name: app.js*/
+
+jQuery.fn.redraw = function () {
+    return this.hide(0, function () { jQuery(this).show() });
+};
+jQuery(document).ready(function () {
+    jQuery('body').redraw();
+});
