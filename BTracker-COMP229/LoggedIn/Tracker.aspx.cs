@@ -37,27 +37,28 @@ namespace BTracker_COMP229
 
         protected void GamesGridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            
+
             int selectedRow = e.RowIndex;
 
-            
-            int StudentID = Convert.ToInt32(GamesGridView.DataKeys[selectedRow].Values["GameID"]);
 
-            
+            int GameID = Convert.ToInt32(GamesGridView.DataKeys[selectedRow].Values["GameID"]);
+
+
             using (BTrackerContext db = new BTrackerContext())
             {
-                
+
                 game deletedStudent = (from gameRecords in db.games
-                                          where gameRecords.GameID == GameID
-                                          select gameRecords).FirstOrDefault();
-                
+                                       where gameRecords.GameID == GameID
+                                       select gameRecords).FirstOrDefault();
+
                 db.games.Remove(deletedStudent);
 
-                /
+
                 db.SaveChanges();
 
-                
+
                 this.GetGames();
             }
+        }
     }
 }
