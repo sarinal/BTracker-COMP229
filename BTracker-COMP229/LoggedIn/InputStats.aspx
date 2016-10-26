@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-sm-1 col-md-1"></div>
             <div id="left" class="col-sm-5 col-md-4">
-                <h5>Home Team</h5>
+                <h3>Home Team</h3>
                 <asp:Button Text="American" ID="HomeALButton" CssClass="btn btn-primary btn-md" runat="server" OnClick="HomeALList_Click" />
                 <asp:Button Text="National" ID="HomeNLButton" CssClass="btn btn-warning btn-md" runat="server" OnClick="HomeNLList_Click" />
                 <br />
@@ -46,7 +46,7 @@
             </div>
 
             <div id="right" class="col-sm-5 col-md-4">
-                <h5>Away Team</h5>
+                <h3>Away Team</h3>
                 <asp:Button Text="American" ID="AwayALButton" CssClass="btn btn-primary btn-md" runat="server" OnClick="AwayALList_Click" />
                 <asp:Button Text="National" ID="AwayNLButton" CssClass="btn btn-warning btn-md" runat="server" OnClick="AwayNLList_Click" />
                 <br />
@@ -58,16 +58,17 @@
             <div class="col-sm-1 col-md-1"></div>
 
         </div>
-        <br />
+
         <div id="bottom" class="row">
             <div class="col-sm-2 col-md-3"></div>
             <div class="col-sm-8 col-md-6">
-                <h5>Score</h5>
+                <h3>Score</h3>
                 <label class="control-label" for="HomeScoreTextbox">Home </label>
                 <asp:TextBox ID="HomeScoreTextbox" runat="server"></asp:TextBox>
 
-                <label class="control-label" for="AwayScoreTextbox">Away</label>
+                &nbsp<i class="fa fa-minus" aria-hidden="true"></i>&nbsp
                 <asp:TextBox ID="AwayScoreTextbox" runat="server"></asp:TextBox>
+                <label class="control-label" for="AwayScoreTextbox">Away</label>
                 <br />
                 <asp:Button Text="Save" ID="SaveButton" CssClass="btn btn-primary btn-lg" runat="server" OnClick="SaveButton_Click" />
             </div>
