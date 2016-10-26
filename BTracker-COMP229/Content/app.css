@@ -89,6 +89,33 @@ body {
 }
 
 /*INPUT STATS PAGE*/
-#inputstatsPage {
+#inputstatsPage label {
     color: #ffffff;
 }
+
+#inputstatsPage #left {
+    text-align: center;
+}
+
+#inputstatsPage #middle {
+    text-align: center;
+}
+
+#inputstatsPage #right {
+    text-align: center;
+}
+
+#inputstatsPage #bottom{
+    text-align: center;
+}
+#inputstatsPage .btn {
+    margin-bottom: 5px;
+}
+
+#inputstatsPage .img{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+
+
