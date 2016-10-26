@@ -14,7 +14,36 @@ namespace BTracker_COMP229
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if ((!IsPostBack) && (Request.QueryString.Count > 0))
+            {
+                this.GetGame();
 
+
+            }
+        }
+
+        protected void GetGame()
+        {
+            // populate the form with existing data fromt he db
+            int GameID = Convert.ToInt32(Request.QueryString["GameID"]);
+
+            //connect to the EF db
+            using (BTrackerContext db = new BTrackerContext())
+            {
+                //poplate a student object instance witht hte studentid fromt he url query
+                Student updatedStudent = (from student in db.Students
+                                          where student.StudentID == StudentID
+                                          select student).FirstOrDefault();
+
+                //map the student properties to the form control
+                if (updatedStudent != null)
+                {
+                    LastNameTextbox.Text = updatedStudent.LastName;
+                    FirstNameTextbox.Text = updatedStudent.FirstMidName;
+                    EnrollmentDateTextbox.Text = updatedStudent.EnrollmentDate.ToString("yyyy-MM-dd");
+
+                }
+            }
         }
 
         protected void HomeALList_Click(object sender, EventArgs e)
@@ -105,7 +134,7 @@ namespace BTracker_COMP229
 
                 db.SaveChanges();
 
-                Response.Redirect("~/Tracker.aspx");
+                Response.Redirect("~/LoggedIn/Tracker.aspx");
 
             }
         }

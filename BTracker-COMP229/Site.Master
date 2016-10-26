@@ -24,15 +24,21 @@
             <div class="col-md-3"></div>
             <div class="col-md-6">
                 <ul>
+                    <asp:PlaceHolder ID="PublicPlaceHolder" runat="server">
                     <li id="home">
-                        <a href="Tracker.aspx"><i class="fa fa-bullseye" aria-hidden="true"></i> Tracker</a>
+                        <a href="Default.aspx"><i class="fa fa-bullseye" aria-hidden="true"></i> Tracker</a>
                     </li>
                     <li id="register">
                         <a href="Login.aspx"><i class="fa fa-sign-in" aria-hidden="true"></i> Register/Login</a>
                     </li>
+                    </asp:PlaceHolder>
+
+                    <asp:PlaceHolder ID="LoginPlaceHolder" runat="server">
                     <li id="update">
-                        <a href="InputStats.aspx"><i class="fa fa-pencil" aria-hidden="true"></i> Update</a>
+                        <a href="/LoggedIn/Tracker.aspx"><i class="fa fa-pencil" aria-hidden="true"></i> Update</a>
+                        <li id="logout" runat="server"><a href="/Logout.aspx"><i class="fa fa-sign-out fa-lg"></i>Logout</a></li>
                     </li>
+                    </asp:PlaceHolder>
                 </ul>
             </div>
             <div class="col-md-3"></div>
