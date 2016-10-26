@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title></title>
     <!--CSS Section-->
+    <link href="//fonts.googleapis.com/css?family=Metrophobic" rel="stylesheet" type="text/css"/>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="Content/font-awesome.min.css" rel="stylesheet" />
@@ -21,8 +22,8 @@
             <img src="~/Assets/images/baseball_logo.png" runat="server"/>
         </div>
         <div id="navigation" class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
                 <ul>
                     <asp:PlaceHolder ID="PublicPlaceHolder" runat="server">
                     <li id="home">
@@ -41,7 +42,7 @@
                     </asp:PlaceHolder>
                 </ul>
             </div>
-            <div class="col-md-3"></div>
+            <div class="col-md-2"></div>
 
         </div>
 
