@@ -25,10 +25,11 @@
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <ul>
-                    <asp:PlaceHolder ID="PublicPlaceHolder" runat="server">
                     <li id="home">
-                        <a href="Default.aspx"><i class="fa fa-bullseye" aria-hidden="true"></i> Tracker</a>
+                        <a href="Default.aspx"><i class="fa fa-bullseye" aria-hidden="true"></i> Home</a>
                     </li>
+                    <asp:PlaceHolder ID="PublicPlaceHolder" runat="server">
+                    
                     <li id="register">
                         <a href="Login.aspx"><i class="fa fa-sign-in" aria-hidden="true"></i> Register/Login</a>
                     </li>
