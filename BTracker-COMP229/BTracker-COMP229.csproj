@@ -122,6 +122,7 @@
   <ItemGroup>
     <Content Include="Assets\images\baseball_logo.png" />
     <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="LoggedIn\Assets\images\baseball_logo.png" />
     <Content Include="LoggedIn\InputStats.aspx" />
     <Content Include="Logout.aspx" />
@@ -180,6 +181,9 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="LoggedIn\InputStats.aspx.cs">
       <DependentUpon>InputStats.aspx</DependentUpon>
