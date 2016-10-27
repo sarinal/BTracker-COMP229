@@ -12,6 +12,8 @@ namespace BTracker_COMP229
 {
     public partial class Default : System.Web.UI.Page
     {
+        string[] ALTeams = new string[] { "Baltimore Orioles", "Boston Red Sox", "Chicago White Sox", "Cleveland Indians", "Detroit Tigers", "Houston Astros", "Kansas City Royals", "Los Angeles Angels", "Minnesota Twins", "New York Yankees", "Oakland Athletics", "Seattle Mariners", "Tampa Bay Rays", "Texas Rangers", "Toronto Blue Jays" };
+        string[] NLTeams = new string[] { "Arizona Diamondbacks", "Atlanta Braves", "Chicago Cubs", "Cincinnati Reds", "Colorado Rockies", "Los Angeles Dodgers", "Miami Marlins", "Milwaukee Brewers", "New York Mets", "Philadelphia Phillies", "Pittsburgh Pirates", "San Diego Padres", "San Francisco Giants", "St. Louis Cardinals", "Washington Nationals" };
         protected void Page_Load(object sender, EventArgs e)
         {
             generateGames();
@@ -23,12 +25,14 @@ namespace BTracker_COMP229
             {
                 var Games = (from allGames in db.games
                              select allGames);
+                int count = 0;
 
                 foreach (var game in Games)
                 {
                     HtmlGenericControl divNew = new HtmlGenericControl("div");
                     placeholder.Controls.Add(divNew);
-                    divNew.ID = "newDivRow";
+                    count = count + 1;
+                    divNew.ID = "newDivRow"+ count;
 
 
 
@@ -65,10 +69,10 @@ namespace BTracker_COMP229
                     TableCell c2r3 = new TableCell();
                     TableCell c3r3 = new TableCell();
                     c1r1.Style.Add(HtmlTextWriterStyle.Padding, "5px");
-                    c1r3.Controls.Add(new LiteralControl("<img src = 'Assets/images/" + game.home_team + ".png' width='200px ' height='200px '>"));
+                    c1r3.Controls.Add(new LiteralControl("<img src = 'Assets/images/" + game.home_team + ".png' width='200px '>"));
                     c2r3.Controls.Add(new LiteralControl("<img src = 'Assets/images/versus.png'width='200px ' height='200px '>"));
                     c1r3.Style.Add(HtmlTextWriterStyle.Padding, "5px");
-                    c3r3.Controls.Add(new LiteralControl("<img src = 'Assets/images/" + game.away_team + ".png' width='200px ' height='200px '>"));
+                    c3r3.Controls.Add(new LiteralControl("<img src = 'Assets/images/" + game.away_team + ".png' width='200px '>"));
                     r3.Cells.Add(c1r3);
                     r3.Cells.Add(c2r3);
                     r3.Cells.Add(c3r3);
@@ -137,6 +141,57 @@ namespace BTracker_COMP229
                 Table1.Rows.Add(r);
             }
             return Table1;
+        }
+
+        protected void ALButton_Click(object sender, EventArgs e)
+        {
+            TeamList.Items.Clear();
+            for (int i = 1; i < 16; i++)
+            {
+                string teamNum = "AL" + i;
+                string teamName = ALTeams[i - 1];
+                TeamList.Items.Add(new ListItem(teamName, teamNum));
+            }
+            string Team = TeamList.SelectedValue;
+        }
+
+        protected void NLButton_Click(object sender, EventArgs e)
+        {
+            TeamList.Items.Clear();
+            for (int i = 1; i < 16; i++)
+            {
+                string teamNum = "NL" + i;
+                string teamName = NLTeams[i - 1];
+                TeamList.Items.Add(new ListItem(teamName, teamNum));
+            }
+            string Team = TeamList.SelectedValue;
+        }
+
+        protected void TeamList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            string selectedTeam = TeamList.SelectedItem.Text;
+            using (BTrackerContext db = new BTrackerContext())
+            {
+                var Teams = (from allTeams in db.teams
+                             select allTeams);
+
+                foreach (var t in Teams)
+                {
+                    if (t.team1 == selectedTeam)
+                    {
+                        teamimage.ImageUrl = "~/Assets/images/" + selectedTeam + ".png";
+
+                        TeamLabel.Text = t.team1;
+
+                        WinsLabel.Text = "W: " + Convert.ToString(t.wins);
+                        LossesLabel.Text = "L: " + Convert.ToString(t.losses);
+
+                        DivisionLabel.Text = t.division;
+
+                    }
+                }
+            }
         }
     }
 }
