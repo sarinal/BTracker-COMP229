@@ -133,6 +133,7 @@
     <Content Include="Site.Master" />
     <Content Include="LoggedIn\Tracker.aspx" />
     <Content Include="Login.aspx" />
+    <None Include="Properties\PublishProfiles\BBTracker.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
