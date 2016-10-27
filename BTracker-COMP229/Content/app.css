@@ -23,6 +23,7 @@ table {
     border: 3px solid white;
     text-align: center;
     width: 80%;
+    margin-top: 10px;
 }
 
 table img{
@@ -92,8 +93,17 @@ td
 }
 
 /*REGISTER PAGE*/
-.btn-warning{
+
+.panel .text-right .btn-warning{
+    background-image: none;
     background-color: #FC1616;
+    border-color: #931111;
+}
+
+.panel .text-right .btn-primary{
+    background-image: none;
+    background-color: #2d9c2f;
+    border-color: #19511a;
 }
 
 .panel-heading{
