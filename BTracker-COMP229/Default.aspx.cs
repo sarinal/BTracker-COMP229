@@ -20,13 +20,17 @@ namespace BTracker_COMP229
             generateGames();
         }
 
+        /*This method creates a new div for each row in the games table
+         * it generates html table code to display the information in each table field
+         * as well as the appropriate team image
+         */
         protected void generateGames()
         {
             using (BTrackerContext db = new BTrackerContext())
             {
                 var Games = (from allGames in db.games
                              select allGames);
-                int count = 0;
+                int count = 0; //to ensure that each newly created div has a unique id
 
                 foreach (var game in Games)
                 {
@@ -83,6 +87,8 @@ namespace BTracker_COMP229
                     TableCell c1r4 = new TableCell();
                     TableCell c2r4 = new TableCell();
                     TableCell c3r4 = new TableCell();
+
+                    //determines who is the winner of the game
                     if (game.home_team == game.winner)
                     { 
                     c1r4.Controls.Add(new LiteralControl("<h3>WINNER!!</h3>"));
@@ -103,50 +109,13 @@ namespace BTracker_COMP229
                         }
             }
         }
-        protected void createGameTable ()
-        {
-            using (BTrackerContext db = new BTrackerContext())
-            {
-                var Games = (from allGames in db.games
-                             select allGames);
-                Table newTable = new Table();
 
-                
-                    TableRow r1 = new TableRow();
-                TableCell c1r1 = new TableCell();
-                TableCell c2r1= new TableCell();
-                TableCell c3r1 = new TableCell();
-                c1r1.Controls.Add(new LiteralControl("HOME TEAM"));
-                c1r1.Controls.Add(new LiteralControl(" TEAM"));
-                c1r1.Controls.Add(new LiteralControl("AWAY TEAM"));
-                    
-            }
-        }
 
-        protected Table testcreatetable ()
-        {
-            Table Table1 = new Table();
-
-            int numrows = 3;
-            int numcells = 2;
-            for (int j = 0; j < numrows; j++)
-            {
-                TableRow r = new TableRow();
-                for (int i = 0; i < numcells; i++)
-                {
-                    TableCell c = new TableCell();
-                    c.Controls.Add(new LiteralControl("row "
-                        + j.ToString() + ", cell " + i.ToString()));
-                    r.Cells.Add(c);
-                }
-                Table1.Rows.Add(r);
-            }
-            return Table1;
-        }
-
+        //Generates the team list for the corresponding listbox when click - American league teams 
         protected void ALButton_Click(object sender, EventArgs e)
         {
             TeamList.Items.Clear();
+            TeamList.Items.Add(new ListItem("--select team--", ""));
             for (int i = 1; i < 16; i++)
             {
                 string teamNum = "AL" + i;
@@ -156,9 +125,11 @@ namespace BTracker_COMP229
             string Team = TeamList.SelectedValue;
         }
 
+        //Generates the team list for the corresponding listbox when click - National league teams 
         protected void NLButton_Click(object sender, EventArgs e)
         {
             TeamList.Items.Clear();
+            TeamList.Items.Add(new ListItem("--select team--", ""));
             for (int i = 1; i < 16; i++)
             {
                 string teamNum = "NL" + i;
@@ -168,6 +139,8 @@ namespace BTracker_COMP229
             string Team = TeamList.SelectedValue;
         }
 
+
+        //Displays the team stat info for the selected team when listbox index is changed
         protected void TeamList_SelectedIndexChanged(object sender, EventArgs e)
         {
             

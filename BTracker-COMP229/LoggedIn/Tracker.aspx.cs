@@ -35,6 +35,7 @@ namespace BTracker_COMP229
             }
         }
 
+        //row deletion
         protected void GamesGridView_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
 

@@ -20,7 +20,7 @@
                     </div>
                     <div style="padding:5px">
                         <asp:DropDownList ID="TeamList" runat="server" AutoPostBack="true" OnSelectedIndexChanged="TeamList_SelectedIndexChanged">
-                            <asp:ListItem Text="--select team--"></asp:ListItem>
+                            <asp:ListItem Text="--choose league--"></asp:ListItem>
                         </asp:DropDownList>
                     </div>
                     <div style="width:30%; float:left; padding-bottom:10px; padding-left:5px">

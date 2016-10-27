@@ -24,35 +24,8 @@ namespace BTracker_COMP229
             //}
         }
 
-        protected void GetGame()
-        {
-            
-            int GameID = Convert.ToInt32(Request.QueryString["GameID"]);
-
-            
-            using (BTrackerContext db = new BTrackerContext())
-            {
-               
-                game updatedGame = (from student in db.games
-                                          where student.GameID == GameID
-                                          select student).FirstOrDefault();
-
-                
-                if (updatedGame != null)
-                {
-                    switch(updatedGame.home_team)
-                    {
-                        case "Baltimore Orioles": case "Boston Red Sox": case "Chicago White Sox": case "Cleveland Indians": case "Detroit Tigers": case "Houston Astros": case "Kansas City Royals": case "Los Angeles Angels": case "Minnesota Twins": case "New York Yankees": case "Oakland Athletics": case "Seattle Mariners": case "Tampa Bay Rays": case "Texas Rangers": case "Toronto Blue Jays":
-                            
-                            break;
-                        default:
-                            break;
-                    }
-
-                }
-            }
-        }
-
+        
+        //Generate Home Team Listbox via global array variable on click
         protected void HomeALList_Click(object sender, EventArgs e)
         {
 
@@ -68,6 +41,7 @@ namespace BTracker_COMP229
 
         }
 
+        //Generate Home Team Listbox via global array variable on click
         protected void HomeNLList_Click(object sender, EventArgs e)
         {
             TeamHomeList.Items.Clear();
@@ -82,6 +56,7 @@ namespace BTracker_COMP229
 
         }
 
+        //Generate Away Team Listbox via global array variable on click
         protected void AwayALList_Click(object sender, EventArgs e)
         {
             TeamAwayList.Items.Clear();
@@ -96,6 +71,7 @@ namespace BTracker_COMP229
 
         }
 
+        //Generate Away Team Listbox via global array variable on click
         protected void AwayNLList_Click(object sender, EventArgs e)
         {
             TeamAwayList.Items.Clear();
@@ -111,6 +87,7 @@ namespace BTracker_COMP229
 
         }
 
+        //Change Team image on index change
         protected void TeamAwayList_SelectedIndexChanged(object sender, EventArgs e)
         {
             string Team = TeamAwayList.SelectedValue;
@@ -123,6 +100,8 @@ namespace BTracker_COMP229
             HomeImage.ImageUrl = "~/Assets/images/" + Team + ".jpg";
         }
 
+
+        //Save inputted info
         protected void SaveButton_Click(object sender, EventArgs e)
         {
             using (BTrackerContext db = new BTrackerContext())
