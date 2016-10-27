@@ -45,10 +45,10 @@
                 </asp:DropDownList>
                 <br />
                 <label class="control-label" for="WeekTextbox">Week </label>
-                <asp:TextBox ID="WeekTextbox" runat="server"></asp:TextBox>
+                <asp:TextBox ID="WeekTextbox" runat="server" TextMode="Number"></asp:TextBox>
                 <br />
                 <label class="control-label" for="SpectatorsTextbox">No. of Spectators </label>
-                <asp:TextBox ID="SpectatorsTextbox" runat="server"></asp:TextBox>
+                <asp:TextBox ID="SpectatorsTextbox" runat="server" TextMode="Number"></asp:TextBox>
             </div>
 
             <div id="right" class="col-sm-5 col-md-4">
@@ -70,10 +70,10 @@
             <div class="col-sm-8 col-md-6">
                 <h3>Score</h3>
                 <label class="control-label" for="HomeScoreTextbox">Home </label>
-                <asp:TextBox ID="HomeScoreTextbox" runat="server"></asp:TextBox>
+                <asp:TextBox ID="HomeScoreTextbox" runat="server" TextMode="Number"></asp:TextBox>
 
                 &nbsp<i class="fa fa-minus" aria-hidden="true"></i>&nbsp
-                <asp:TextBox ID="AwayScoreTextbox" runat="server"></asp:TextBox>
+                <asp:TextBox ID="AwayScoreTextbox" runat="server" TextMode="Number"></asp:TextBox>
                 <label class="control-label" for="AwayScoreTextbox">Away</label>
                 <br />
                 <asp:Button Text="Save" ID="SaveButton" CssClass="btn btn-primary btn-lg" runat="server" OnClick="SaveButton_Click" />
