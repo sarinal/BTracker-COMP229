@@ -36,6 +36,7 @@ td
     padding: 5px;
 }
 
+
 @-webkit-keyframes fontfix {
   from { opacity: 1; }
   to { opacity: 1; }
@@ -152,10 +153,19 @@ td
     margin-bottom: 10px;
 }
 
-#inputstatsPage #bottom .btn{
+#inputstatsPage #bottom .btn-primary{
     background-image: none;
     background-color: #2d9c2f;
     border-color: #19511a;
+    margin-top: 10px;
+    text-align: center;
+    width: 100px;
+}
+
+#inputstatsPage #bottom .btn-warning{
+    background-image: none;
+    background-color: #FC1616;
+    border-color: #931111;
     margin-top: 10px;
     text-align: center;
     width: 100px;
