@@ -18,12 +18,12 @@
                         <asp:Button Text="American" ID="ALButton" CssClass="btn btn-primary btn-md" runat="server" OnClick="ALButton_Click" />
                         <asp:Button Text="National" ID="NLButton" CssClass="btn btn-warning btn-md" runat="server" OnClick="NLButton_Click" />
                     </div>
-                    <div>
+                    <div style="padding:5px">
                         <asp:DropDownList ID="TeamList" runat="server" AutoPostBack="true" OnSelectedIndexChanged="TeamList_SelectedIndexChanged">
                             <asp:ListItem Text="--select team--"></asp:ListItem>
                         </asp:DropDownList>
                     </div>
-                    <div style="width:30%; float:left;">
+                    <div style="width:30%; float:left; padding-bottom:10px; padding-left:5px">
                         <asp:Image ID="teamimage" runat="server" width="200px"/>
                     </div>
                     <div id="teaminfo" style="overflow:hidden">

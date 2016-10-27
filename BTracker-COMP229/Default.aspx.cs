@@ -16,6 +16,7 @@ namespace BTracker_COMP229
         string[] NLTeams = new string[] { "Arizona Diamondbacks", "Atlanta Braves", "Chicago Cubs", "Cincinnati Reds", "Colorado Rockies", "Los Angeles Dodgers", "Miami Marlins", "Milwaukee Brewers", "New York Mets", "Philadelphia Phillies", "Pittsburgh Pirates", "San Diego Padres", "San Francisco Giants", "St. Louis Cardinals", "Washington Nationals" };
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             generateGames();
         }
 
